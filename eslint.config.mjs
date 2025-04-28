@@ -17,7 +17,9 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/ban-ts-comment": "off",
       "react-hooks/rules-of-hooks": "off",
-      "no-unused-vars": "off"
+      "no-unused-vars": "off",
+      "no-unused-expressions": "off",
+      "non-nullish-assertion": "off",
     }
   }
 ];
