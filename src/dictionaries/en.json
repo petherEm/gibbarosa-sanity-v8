@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "title": "Iconic pre-loved fashion",
+        "subtitle": "Explore our curated collection of exceptional bags, shoes, and accessories that are worth investing in.",
+        "button": "Shop now"
+    },
+    "productCarousel": {
+        "title": "New In",
+        "button": "See All",
+        "relatedProducts": "You may also like"
+    },
+    "midBanner": {
+        "title": "Collector's Choice",
+        "subtitle": "True treasures for fashion connoisseurs and collectors.",
+        "button": "View all"
+    },
+    "ourStoryShort": {
+        "title": "Our Story",
+        "text_1": "Gibbarosa was born out of a love for history, heritage, and the savoir-faire of luxury fashion houses.",
+        "text_2": "We give a second life to timeless pieces that should be treated as true investments.",
+        "button": "Get to know us"
+    },
+    "newsletter": {
+        "title": "Join us and get",
+        "titleAmount": "20€",
+        "titleEnd": "off your first purchase.",
+        "emailPlaceholder": "Your email address",
+        "joinButton": "Join now",
+        "consentText": "By signing up, you agree to receive marketing offers via email and acknowledge that you have read our Privacy Policy. You can unsubscribe at any time at the bottom of our emails."
+    },
+    "footer": {
+        "tagline": "Surround yourself with beautiful, timeless products.",
+        "disclaimer": "All items available on Gibbarosa are second-hand and used. No owner of product brands available on Gibbarosa has any affiliation with Gibbarosa, nor sponsors advertisements. Brand trademarks are the property of their respective brand owners.",
+        "copyright": "© {year} Gibbarosa. All rights reserved.",
+        "credit": "Crafted with ❤️ by Gibbarosa Labs"
+    },
+    "cart": {
+        "empty": {
+            "title": "Your shopping cart is empty",
+            "subtitle": "Are you looking for inspiration?",
+            "button": "Explore Home Page"
+        }
+    },
+    "cartDropdown": {
+        "title": "Shopping Cart",
+        "empty": {
+            "title": "Your shopping cart is empty.",
+            "subtitle": "Are you looking for inspiration?",
+            "button": "Explore Home page"
+        },
+    "total": "Total",
+    "goToCart": "Go to cart"
+}
+}

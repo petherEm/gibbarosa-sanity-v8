@@ -1,26 +1,250 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-staatliches: var(--font-staatliches), serif;
+
+
+  /* Add your custom colors here */
+  --color-primary: #ffffff; /* Replace with your desired background color */
+  --color-secondary: #000000; /* Replace with your desired background color */
+  --color-bg-primary: #ffffff; /* Replace with your desired background color */
+  --color-bg-secondary: #000000; /* Replace with your desired background color */
+  --color-content-basic-primary: #000000; /* Replace with your desired text color */
+  --color-content-basic-secondary: #ffffff; /* Replace with your desired text color */
+  --color-border-primary: #000000; /* Replace with your desired border color */
+  --color-border-secondary: #ffffff; /* Replace with your desired border color */
+  --color-border-accent: #000000; /* Replace with your desired border color */
+  --color-border-accent-secondary: #ffffff; /* Replace with your desired border color */
+  --color-border-action-primary: #000000; /* Replace with your desired border color */
+  --color-border-action-secondary: #ffffff; /* Replace with your desired border color */
+  --color-ring-action-primary: #000000; /* Replace with your desired ring color */
+  --color-ring-action-secondary: #ffffff; /* Replace with your desired ring color */
+  --color-action-primary: #000000; /* Replace with your desired action color */
+  --color-action-secondary: #ffffff; /* Replace with your desired action color */
+  
+  /* Skeleton colors for loading states */
+  --color-skeleton-primary: #f3f4f6; /* Light gray base */
+  --color-skeleton-secondary: #e5e7eb; /* Slightly darker for gradient effect */
+
+  /* Typography */
+  --font-size-sm: 0.75rem;
+  --line-height-sm: 1.25rem;
+  --font-size-md: 0.875rem; 
+  --line-height-md: 1.375rem;
+  --font-size-lg: 1rem;
+  --line-height-lg: 1.5rem;
+  --font-size-xl: 1.25rem;
+  --line-height-xl: 1.75rem;
+  --font-size-2xl: 1.5rem;
+  --line-height-2xl: 2rem;
+  --font-size-3xl: 2rem;
+  --line-height-3xl: 2.5rem;
+  --font-size-4xl: 2.5rem;
+  --line-height-4xl: 3rem;
+  --font-size-5xl: 3rem;
+  --line-height-5xl: 3.5rem;
+
+  /* Screen breakpoints */
+  --breakpoint-xsmall: 355px;
+  --breakpoint-small: 640px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 900px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-2xl: 1700px;
+
+  /* Animations */
+  --animate-ring: ring 2.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  --animate-fade-in-right: fade-in-right 0.3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  --animate-fade-in-top: fade-in-top 0.2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  --animate-fade-out-top: fade-out-top 0.2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  --animate-accordion-open: accordion-slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards;
+  --animate-accordion-close: accordion-slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1) forwards;
+  --animate-enter: enter 200ms ease-out;
+  --animate-leave: leave 150ms ease-in forwards;
+  --animate-slide-in: slide-in 1.2s cubic-bezier(.41,.73,.51,1.02);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes ring {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-in-right {
+  0% { opacity: 0; transform: translateX(10px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fade-in-top {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-out-top {
+  0% { height: 100%; }
+  99% { height: 0; }
+  100% { visibility: hidden; }
+}
+
+@keyframes accordion-slide-down {
+  0% { min-height: 0; max-height: 0; opacity: 0; }
+  100% { min-height: var(--radix-accordion-content-height); max-height: none; opacity: 1; }
+}
+
+@keyframes accordion-slide-up {
+  0% { height: var(--radix-accordion-content-height); opacity: 1; }
+  100% { height: 0; opacity: 0; }
+}
+
+@keyframes enter {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes leave {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+@keyframes slide-in {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+@layer base {
+  .light {
+    background-color: var(--color-bg-primary);
+    color: var(--color-content-basic-primary);
+  }
+
+  .dark {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-content-basic-secondary);
+  }
+
+  h1 {
+    font-size: var(--font-size-5xl);
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: var(--font-size-md);
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: var(--font-size-sm);
+    font-weight: 400;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-primary text-content-basic-primary;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+  }
+
+  input:focus ~ label {
+    left: 0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill::first-line,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .dark input:-webkit-autofill,
+  .dark input:-webkit-autofill:hover,
+  .dark input:-webkit-autofill:focus,
+  .dark input:-webkit-autofill::first-line {
+    color: white;
+  }
+  .light input:-webkit-autofill,
+  .light input:-webkit-autofill:hover,
+  .light input:-webkit-autofill:focus,
+  .light input:-webkit-autofill::first-line {
+    color: black;
+  }
+
+  input[type='search']::-webkit-search-decoration,
+  input[type='search']::-webkit-search-cancel-button,
+  input[type='search']::-webkit-search-results-button,
+  input[type='search']::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+}
+
+/* NProgress styles - outside any layer to avoid being reset */
+#nprogress {
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#nprogress .bar {
+  background: #0070f3;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #0070f3, 0 0 5px #0070f3;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
 }

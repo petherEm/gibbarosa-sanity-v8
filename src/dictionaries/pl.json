@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "title": "Ikoniczna moda z drugiej ręki",
+        "subtitle": "Odkryj naszą selekcję wyjątkowych torebek, butów i akcesoriów wartych inwestycji.",
+        "button": "Sprawdź"
+    },
+    "productCarousel": {
+        "title": "Nowości",
+        "button": "Zobacz wszystko",
+        "relatedProducts": "Może Ci się również spodobać"
+    },
+    "midBanner": {
+        "title": "Wybór kolekcjonerski",
+        "subtitle": "Prawdziwe skarby dla koneserek i kolekcjonerek mody.",
+        "button": "Zobacz wszystko"
+    },
+    "ourStoryShort": {
+        "title": "Nasza historia",
+        "text_1": "Gibbarosa powstała z miłości do historii, dziedzictwa i savoir-faire luksusowych domów mody.",
+        "text_2": "Dajemy drugie życie ponadczasowym produktom, które należy traktować jak prawdziwe inwestycje.",
+        "button": "Poznaj nas"
+    },
+    "newsletter": {
+        "title": "Dołącz do nas i otrzymaj",
+        "titleAmount": "100 zł",
+        "titleEnd": "na pierwsze zakupy.",
+        "emailPlaceholder": "Twój adres email",
+        "joinButton": "Dołącz",
+        "consentText": "Rejestrując się, wyrażasz zgodę na otrzymywanie ofert marketingowych drogą mailową i potwierdzasz, że zapoznałeś/aś się z naszą Polityką Prywatności. Możesz zrezygnować z subskrypcji w dowolnym momencie, klikając link na dole naszych wiadomości e-mail."
+    },
+    "footer": {
+        "tagline": "Otaczaj się pięknymi, ponadczasowymi produktami.",
+        "disclaimer": "Wszystkie przedmioty dostępne na Gibbarosa są z drugiego obiegu i używane. Żaden właściciel marek produktów dostępnych na Gibbarosa nie ma powiązania z Gibbarosa, ani nie sponsoruje reklam. Znaki towarowe marek są własnością odpowiednich właścicieli marek.",
+        "copyright": "© {year} Gibbarosa. Wszelkie prawa zastrzeżone.",
+        "credit": "Stworzone z ❤️ przez Gibbarosa Labs"
+    },
+    "cart": {
+        "empty": {
+            "title": "Twój koszyk jest pusty",
+            "subtitle": "Szukasz inspiracji?",
+            "button": "Przeglądaj stronę główną"
+        }
+    },
+    "cartDropdown": {
+        "title": "Koszyk",
+        "empty": {
+            "title": "Twój koszyk jest pusty.",
+            "subtitle": "Szukasz inspiracji?",
+            "button": "Przeglądaj stronę główną"
+        },
+        "total": "Razem",
+        "goToCart": "Przejdź do koszyka"
+    }
+}

@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gibbarosa E-Commerce
 
-## Getting Started
+A modern multilingual e-commerce platform built with Next.js 15, Medusa.js, Sanity.io, and TailwindCSS 4.
 
-First, run the development server:
+## 🚀 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Gibbarosa is a full-featured e-commerce solution that combines the power of Medusa.js headless commerce with a Next.js frontend. The architecture features a dedicated backend service for handling commerce operations and a modern, responsive frontend for an exceptional shopping experience.
+
+## ✨ Features
+
+- **Multilingual Support**: Full internationalization with support for English, Polish, and French
+- **Headless Architecture**: Clean separation between frontend and backend concerns
+- **Modern Tech Stack**: Built with Next.js 15, TailwindCSS 4, and other cutting-edge technologies
+- **Content Management**: Integrated Sanity.io for flexible content modeling
+- **Server-Side Rendering**: Optimized performance with Next.js server components
+- **Responsive Design**: Mobile-first approach for all screen sizes
+- **Product Management**: Comprehensive product catalog with detailed specifications
+- **Cart & Checkout**: Seamless shopping experience
+- **User Accounts**: Customer authentication and profile management
+
+## 🛠️ Technology Stack
+
+### Frontend ([gibbarosa-8-front](gibbarosa-8-front/))
+
+- **Framework**: [Next.js 15](https://nextjs.org/) with App Router
+- **Styling**: [TailwindCSS 4](https://tailwindcss.com/)
+- **Content Management**: [Sanity.io](https://www.sanity.io/)
+- **State Management**: React Server Components + Client Hooks
+
+### Backend ([gibbarosa-7-backend](gibbarosa-7-backend/))
+
+- **E-commerce Engine**: [Medusa.js](https://medusajs.com/)
+- **Database**: PostgreSQL
+- **API**: RESTful endpoints
+
+## 🗂️ Project Structure
+
+The project is organized into two main directories:
+
+```
+gibbarosa-7-backend/     # Medusa.js backend service
+gibbarosa-8-front/       # Next.js frontend application
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Frontend Routes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/[countryCode]/(main)/` - Main shop homepage
+- `/[countryCode]/(main)/products/[handle]` - Product detail pages
+- `/[countryCode]/(main)/shop` - Product listings and category pages
+- `/studio/[[...tool]]` - Sanity Studio for content management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Internationalization
 
-## Learn More
+The application supports multiple languages through a country code routing pattern:
 
-To learn more about Next.js, take a look at the following resources:
+```
+/en/... - English (default)
+/pl/... - Polish
+/fr/... - French
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Product information is localized including titles, descriptions, materials, and specifications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔄 Product Synchronization
 
-## Deploy on Vercel
+Products are managed in both Medusa (for commerce operations) and Sanity (for enhanced content). Key features include:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Multilingual product content
+- Rich media management
+- Detailed specifications
+- Pricing information
+- Related products

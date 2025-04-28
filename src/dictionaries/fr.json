@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "title": "Mode iconique de seconde main",
+        "subtitle": "Découvrez notre sélection exclusive de sacs, chaussures et accessoires exceptionnels, un véritable investissement.",
+        "button": "Explorez maintenant"
+    },
+    "productCarousel": {
+        "title": "Nouveautés",
+        "button": "Voir tout",
+        "relatedProducts": "Vous pourriez aussi aimer"
+    },
+    "midBanner": {
+        "title": "Le choix de la collectionneuse",
+        "subtitle": "De vrais trésors pour les passionnées et collectionneuses de mode.",
+        "button": "Voir tout"
+    },
+    "ourStoryShort": {
+        "title": "Our Story",
+        "text_1": "Gibbarosa est née d'un amour pour l'histoire, le patrimoine et le savoir-faire des maisons de mode de luxe.",
+        "text_2": "Nous donnons une seconde vie aux pièces intemporelles, qui doivent être considérées comme de véritables investissements.",
+        "button": "Découvrez-nous"
+    },
+    "newsletter": {
+        "title": "Rejoignez-nous et recevez",
+        "titleAmount": "20€",
+        "titleEnd": "de réduction sur votre premier achat.",
+        "emailPlaceholder": "Votre adresse e-mail",
+        "joinButton": "Rejoignez-nous !",
+        "consentText": "En vous inscrivant, vous acceptez de recevoir des offres marketing par e-mail et reconnaissez avoir lu notre Politique de confidentialité. Désabonnez-vous à tout moment au bas de nos e-mails"
+    },
+    "footer": {
+        "tagline": "Entourez-vous de produits beaux et intemporels.",
+        "disclaimer": "Tous les articles disponibles sur Gibbarosa sont d'occasion et utilisés. Aucun propriétaire des marques de produits disponibles sur Gibbarosa n'a d'affiliation avec Gibbarosa, ni ne sponsorise de publicités. Les marques déposées sont la propriété de leurs propriétaires respectifs.",
+        "copyright": "© {year} Gibbarosa. Tous droits réservés.",
+        "credit": "Créé avec ❤️ par Gibbarosa Labs"
+    },
+    "cart": {
+        "empty": {
+            "title": "Votre panier est vide",
+            "subtitle": "Vous cherchez de l'inspiration ?",
+            "button": "Explorer la page d'accueil"
+        }
+    },
+    "cartDropdown": {
+        "title": "Panier",
+        "empty": {
+            "title": "Votre panier est vide.",
+            "subtitle": "Vous cherchez de l'inspiration ?",
+            "button": "Explorer la page d'accueil"
+        },
+        "total": "Total",
+        "goToCart": "Voir le panier"
+    }
+}
