@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 
 import { HttpTypes } from "@medusajs/types";
-import AddressActions from "@/components/checkout/components/address-actions";
+import AddressActions from "@/components/checkout/address-actions";
 import { Badge } from "@/components/shared/badge";
 
 type AddressListProps = {

@@ -4,7 +4,7 @@ import { useActionState, useEffect, useState } from "react";
 
 import { updateCustomer } from "@/lib/data/customer";
 import { HttpTypes } from "@medusajs/types";
-import { SubmitButton } from "@/components/checkout/components/submit-button";
+import { SubmitButton } from "@/components/checkout/submit-button";
 import { Button } from "@/components/shared/button";
 import {
   Dialog,

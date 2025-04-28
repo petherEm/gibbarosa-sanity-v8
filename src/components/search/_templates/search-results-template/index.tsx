@@ -13,11 +13,11 @@ import { ProductCarousel } from "@/components/products/product-carousel";
 import { search } from "@/components/search/actions";
 import SkeletonProductGrid from "@/components/skeletons/_templates/skeleton-product-grid";
 import SkeletonProductsCarousel from "@/components/skeletons/_templates/skeleton-products-carousel";
-import ProductFilters from "@/components/store/components/filters";
-import ActiveProductFilters from "@/components/store/components/filters/active-filters";
-import ProductFiltersDrawer from "@/components/store/components/filters/filters-drawer";
-import StoreBreadcrumbs from "@/components/store/templates/breadcrumbs";
-import PaginatedProducts from "@/components/store/templates/paginated-products";
+import ProductFilters from "@/components/store/filters";
+import ActiveProductFilters from "@/components/store/filters/active-filters";
+import ProductFiltersDrawer from "@/components/store/filters/filters-drawer";
+import StoreBreadcrumbs from "@/components/store/_templates/breadcrumbs";
+import PaginatedProducts from "@/components/store/_templates/paginated-products";
 
 export const runtime = "edge";
 
