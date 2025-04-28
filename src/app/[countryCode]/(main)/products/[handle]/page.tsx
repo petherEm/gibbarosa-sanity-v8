@@ -12,36 +12,73 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  const countryCodes = await listRegions().then(
-    (regions) =>
-      regions
-        ?.map((r) => r.countries?.map((c) => c.iso_2))
-        .flat()
-        .filter(Boolean) as string[]
-  );
+  try {
+    const countryCodes = await listRegions().then(
+      (regions) =>
+        regions
+          ?.map((r) => r.countries?.map((c) => c.iso_2))
+          .flat()
+          .filter(Boolean) as string[]
+    );
 
-  if (!countryCodes) {
-    return null;
+    if (!countryCodes || countryCodes.length === 0) {
+      console.warn("No country codes found, skipping static generation");
+      return [];
+    }
+
+    // Limit the number of products to fetch to avoid timeout during build
+    const productsPromises = countryCodes.map(async (countryCode) => {
+      try {
+        const result = await getProductsList({
+          countryCode,
+          limit: 20, // Limit products per country to avoid timeouts
+        });
+        return result;
+      } catch (error) {
+        console.error(`Failed to fetch products for ${countryCode}:`, error);
+        return { response: { products: [] } };
+      }
+    });
+
+    const productsResponses = await Promise.all(productsPromises);
+    const products = productsResponses
+      .map(({ response }) => response.products || [])
+      .flat();
+
+    if (products.length === 0) {
+      console.warn("No products found, skipping static generation");
+      return [];
+    }
+
+    // Generate a limited number of static params to avoid build timeout
+    const staticParams = [];
+    for (const countryCode of countryCodes) {
+      for (const product of products) {
+        if (product.handle) {
+          staticParams.push({
+            countryCode,
+            handle: product.handle,
+          });
+
+          // Limit total number of static pages to generate
+          if (staticParams.length >= 100) {
+            console.warn("Limiting static generation to 100 products total");
+            break;
+          }
+        }
+      }
+      if (staticParams.length >= 100) break;
+    }
+
+    console.log(
+      `Generated static params for ${staticParams.length} product pages`
+    );
+    return staticParams;
+  } catch (error) {
+    console.error("Error in generateStaticParams:", error);
+    // Return an empty array instead of null to avoid build failures
+    return [];
   }
-
-  const products = await Promise.all(
-    countryCodes.map((countryCode) => {
-      return getProductsList({ countryCode });
-    })
-  ).then((responses) =>
-    responses.map(({ response }) => response.products).flat()
-  );
-
-  const staticParams = countryCodes
-    ?.map((countryCode) =>
-      products.map((product) => ({
-        countryCode,
-        handle: product.handle,
-      }))
-    )
-    .flat();
-
-  return staticParams;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
