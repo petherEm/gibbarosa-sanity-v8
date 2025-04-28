@@ -1,5 +1,5 @@
 import { HttpTypes } from "@medusajs/types";
-import CountrySelect from "@/components/checkout/components/country-select";
+import CountrySelect from "@/components/checkout/country-select";
 import { Box } from "@/components/shared/box";
 import { Checkbox } from "@/components/shared/checkbox";
 import { Input } from "@/components/shared/input";

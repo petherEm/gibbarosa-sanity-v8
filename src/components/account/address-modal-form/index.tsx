@@ -10,7 +10,7 @@ import React, {
 import { addCustomerAddress, updateCustomerAddress } from "@/lib/data/customer";
 import { userShippingAddressFormValidationSchema } from "@/lib/util/validator";
 import { HttpTypes } from "@medusajs/types";
-import { SubmitButton } from "@/components/checkout/components/submit-button";
+import { SubmitButton } from "@/components/checkout/submit-button";
 import {
   Dialog,
   DialogBody,
